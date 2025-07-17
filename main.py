@@ -49,7 +49,7 @@ CURRENT_COORDS = "00060101" + "55003800"
 # === LOGIN TOKEN HANDLING ===
 session = requests.Session()
 mageurl = (
-    "https://gae4php82-real.an.r.appspot.com/_ah/login?continue=https://gae4php82-real.an.r.appspot.com/authcreate&auth=g.a000ywitBIOzJ9x5UpMzqadLmT_bRqbWUocG-8WbtpqkC9gwHbJxbvDaE9pvH1pvCnwdG1zHFQACgYKAe0SARISFQHGX2Miqq6GlB1F9OtvMwDzZbCg4xoVAUF8yKoCGgAU8I4kxj7Wu24b3p7A0076",)
+    "https://gae4php82-real.an.r.appspot.com/_ah/login?continue=https://gae4php82-real.an.r.appspot.com/authcreate&auth=g.a000ywitBIOzJ9x5UpMzqadLmT_bRqbWUocG-8WbtpqkC9gwHbJxbvDaE9pvH1pvCnwdG1zHFQACgYKAe0SARISFQHGX2Miqq6GlB1F9OtvMwDzZbCg4xoVAUF8yKoCGgAU8I4kxj7Wu24b3p7A0076")
 session.get(mageurl, allow_redirects=True)
 base = f"{urlparse(mageurl).scheme}://{urlparse(mageurl).netloc}"
 resp_login_token = session.get(f"{base}/authcreate")
